@@ -1,0 +1,142 @@
+{
+  "user_guid": "1240413m2lm",
+  "question": "Sobre que temas me puedes responder?",
+  "thread_id": "15416351"
+}
+
+{
+  "user_guid": "1240413m2lm",
+  "question": "Puedes darme un listado de productos?",
+  "thread_id": "15416351"
+}
+
+
+{
+  "user_guid": "1240413m2lm",
+  "question": "Cómo estás intentando invocar la herramienta para obtener el listado de productos?",
+  "thread_id": "15416351"
+}
+
+{
+  "user_guid": "1240413m2lm",
+  "question": "Cómo estás intentando invocar la herramienta para obtener los datos de un producto?",
+  "thread_id": "15416351"
+}
+
+{
+  "user_guid": "1240413m2lm",
+  "question": "Cómo estás intentando invocar la herramienta para eliminar un producto?",
+  "thread_id": "15416351"
+}
+
+{
+  "user_guid": "1240413m2lm",
+  "question": "Puedes obtener un listado de productos?",
+  "thread_id": "15416351"
+}
+
+{
+  "user_guid": "1240413m2lm",
+  "question": "QUé tipo de respuesta esperas de consultar_productos()?",
+  "thread_id": "15416351"
+}
+
+{
+  "user_guid": "1240413m2lm",
+  "question": "Puedes darme los datos del producto 1?",
+  "thread_id": "15416351"
+}
+
+{
+  "user_guid": "1240413m2lm",
+  "question": "Puedes darme los datos del Monitor Dell 24? Y cuantas unidades tenemos?",
+  "thread_id": "15416351"
+}
+
+{
+  "user_guid": "1240413m2lm",
+  "question": "Cuántas unidades tenemos?",
+  "thread_id": "15416351"
+}
+
+
+
+{
+  "user_guid": "1240413m2lm",
+  "question": "Puedes darme los datos del producto 2?",
+  "thread_id": "15416351"
+}
+
+{
+  "user_guid": "1240413m2lm",
+  "question": "Ok, quiero comprar 2 de esos",
+  "thread_id": "15416351"
+}
+
+{
+  "user_guid": "1240413m2lm",
+  "question": "Quiero comprar 10 Monitores Dell 24",
+  "thread_id": "15416351"
+}
+
+{
+  "user_guid": "1240413m2lm",
+  "question": "Hola, soy Rodrigo ELissamburu. Quiero comprar: 10 Monitores Dell 24, 5 Mouse gaming 6000 DPI RGB y 3 Webcam 1080p con micrófono",
+  "thread_id": "15416351"
+}
+
+{
+  "user_guid": "1240413m2lm",
+  "question": "Ok, soy Rodrigo ELissamburu",
+  "thread_id": "15416351"
+}
+
+{
+  "user_guid": "1240413m2lm",
+   "question": "Tengo alertas de stock?",
+  "thread_id": "15416351"
+}
+
+{
+  "user_guid": "1240413m2lm",
+   "question": "Puedes reponer stock de un producto?",
+  "thread_id": "15416351"
+}
+
+{
+  "user_guid": "1240413m2lm",
+   "question": "Puedes decirme el stock del producto 2?",
+  "thread_id": "15416351"
+}
+
+{
+  "user_guid": "1240413m2lm",
+   "question": "Quiero un reporte de movimientos del producto 2?",
+  "thread_id": "15416351"
+}
+
+
+{
+  "user_guid": "1240413m2lm",
+   "question": "Ok, quiero agregar 10 unidades del producto 2. Llegaron esta mañana al depósito",
+  "thread_id": "15416351"
+}
+
+{
+  "user_guid": "1240413m2lm",
+  "question": "Puedes eliminar el producto 1?",
+  "thread_id": "15416351"
+}
+
+
+{
+  "user_guid": "1240413m2lm",
+  "question": "Puedes darme los datos del producto 25?",
+  "thread_id": "15416351"
+}
+
+{
+  "user_guid": "1240413m2lm",
+  "question": "Quiero comprar el producto 1?",
+  "thread_id": "15416351"
+}

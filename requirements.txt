@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+openai 
+python-dotenv  
+langgraph 
+langchain_community 
+langchain-core 
+langchain-openai
+python-jose[cryptography]
+requests  
+IPython
