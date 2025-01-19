@@ -3,6 +3,7 @@ from langgraph.graph import MessagesState, END
 from src.node.productos_node import productos_nodo
 from src.node.ventas_node import ventas_nodo
 from src.node.stock_node import stock_nodo
+from src.node.sobre_nosotros_node import sobre_nosotros_nodo
 
 from src.node.supervisor_node import supervisor_node
 from langgraph.checkpoint.memory import MemorySaver
@@ -14,6 +15,7 @@ workflow.add_node("supervisor_nodo", supervisor_node)
 workflow.add_node("productos_nodo", productos_nodo)  
 workflow.add_node("stock_nodo", stock_nodo) 
 workflow.add_node("ventas_nodo", ventas_nodo) 
+workflow.add_node("sobre_nosotros_nodo", sobre_nosotros_nodo)
 
 """
 def decide_next_nodes(context):

@@ -80,6 +80,19 @@ def consultar_productos():
         print(f"Error al obtener productos: {e}")  
         return None  
 
+def buscar_productos(nombre: str):
+     """
+        Realiza una búsqueda de productos relacionados con el texto recibido
+
+        Args:
+            nombre: Texto relacionado con el nombre o descripción del producto.
+        Returns:
+            Lista de productos 
+     """
+     client = InventoryAPIClient(os.environ["INVENTORY_API_PATH"])
+     products = client.search_products(nombre)
+     return products
+
 def obtener_producto(product_id:int):
         """  
         Obtiene los detalles de un producto.  

@@ -21,12 +21,64 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.post("/api/v1/init-about-us")
+async def init_about_us():
+    '''  
+        Endpoint para obtener la información de la empresa
+    '''
+    from langchain_core.documents import Document
+    from langchain.document_loaders import UnstructuredMarkdownLoader,  TextLoader
+    from langchain.text_splitter import CharacterTextSplitter
+    markdown_path = "./src/about_us.md"
+
+    from langchain_text_splitters import MarkdownHeaderTextSplitter
+    headers_to_split_on = [
+    ("#", "Header 1"),
+    ("##", "Header 2"),
+    ("###", "Header 3"),
+    ]
+    
+    # loader = UnstructuredMarkdownLoader(markdown_path, text_splitter=markdown_splitter)
+    loader = TextLoader(markdown_path)
+    # md = '# Foo\n\n ## Bar\n\nHi this is Jim  \nHi this is Joe\n\n ## Baz\n\n Hi this is Molly' 
+    documents = loader.load()
+    print(documents[0].page_content[:1000])
+
+    markdown_splitter = MarkdownHeaderTextSplitter(headers_to_split_on)
+    md_header_splits = markdown_splitter.split_text(documents[0].page_content)
+    #  md_header_splits = markdown_splitter.split_text(documents[0].page_content)
+    
+    print('#################')
+    print(len(md_header_splits))
+    for sentence in md_header_splits:
+        print('>>>>>>>>>>>>>>>>>>>>>>> ')
+        print(sentence.page_content[:50])
+    #    print(sentence.page_content)
+    print('#################')
+    #from langchain_openai import ChatOpenAI
+
+    #llm = ChatOpenAI(model_name="gpt-4o")
+
+    #for text_chunk in split_sentences:
+    #    summary = llm.predict("Summarize this text: " + text_chunk.page_content)
+        #print(summary)
+
+    from src.utils.vectorStore import upload_data
+    upload_data(md_header_splits,"about_us")
+
+    from src.tools.sobre_nosotros import sobre_nosotros_retriever_tool
+    tool = sobre_nosotros_retriever_tool()
+    resultas = tool.invoke("Cuál es el nombre de la empresa?")
+    print ("Retrieval")
+    print(resultas)
+    return True
+
+
 @app.post("/api/v1/chat")
 async def chat_endpoint(request: ModelRequest) -> ModelResponse:
     '''  
         Endpoint para chatear con el sistema de agentes
     '''
-    
     from langchain.globals import set_debug
 
     set_debug(False)
@@ -46,7 +98,7 @@ async def chat_endpoint(request: ModelRequest) -> ModelResponse:
     config = {"configurable": {"thread_id": "7"}}
 
     response1 = graph.invoke({"messages": [("user", request.question)]}, subgraphs=True, config=config)
-    print("##############################################")
+    """print("##############################################")
     print(response1)
     print('<<<<<<<<<<<<<<<<<')
     print(response1[0])
@@ -58,13 +110,13 @@ async def chat_endpoint(request: ModelRequest) -> ModelResponse:
 
     print("##############################################")
     print(response1[1]["messages"][-1].content)
-    print("##############################################")
+    print("##############################################")"""
     
     return ModelResponse(
         user_guid=request.user_guid,
         question=request.question,
         thread_id=request.thread_id,
-        answer=response1[1]["messages"][-1].content
+        answer=response1[1]["messages"][-1].content.replace("FINAL RESPONSE:\n", " "),
     )
 
 

@@ -60,12 +60,24 @@
 }
 
 
-
 {
   "user_guid": "1240413m2lm",
   "question": "Puedes darme los datos del producto 2?",
   "thread_id": "15416351"
 }
+
+{
+"user_guid": "1240413m2lm",
+"question": "Cómo se llama la empresa?",
+"thread_id": "15416351"
+}
+
+{
+"user_guid": "1240413m2lm",
+"question": "Cómo es la garantía?",
+"thread_id": "15416351"
+}
+
 
 {
   "user_guid": "1240413m2lm",

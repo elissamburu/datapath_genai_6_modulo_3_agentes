@@ -9,3 +9,7 @@ langchain-openai
 python-jose[cryptography]
 requests  
 IPython
+langchain_chroma
+unstructured
+"unstructured[md]" nltk
+langchain-text-splitters

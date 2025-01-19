@@ -88,6 +88,20 @@ class InventoryAPIClient:
         response = self.session.get(f"{self.base_url}/products/{product_id}")  
         return self._handle_response(response)  
 
+    def search_products(self, product_name: str) -> Dict:  
+        """  
+        Realiza una búsqueda de los productos por la descripción que envíes 
+        
+        Args:  
+            product_name: Nombre o parte del nombre del producto.
+            
+        Returns:  
+            list[Dict]: Datos de los producto  
+        """  
+        response = self.session.get(f"{self.base_url}/products/search/{product_name}")  
+        return self._handle_response(response)  
+
+
     def get_all_products(self) -> List[Dict]:  
         """  
         Obtiene la lista de todos los productos.  
@@ -98,6 +112,8 @@ class InventoryAPIClient:
         print(f"{self.base_url}/products/")
         response = self.session.get(f"{self.base_url}/products/")  
         return self._handle_response(response)  
+
+    
 
     def update_product(self, product_id: int, **kwargs) -> Dict:  
         """  

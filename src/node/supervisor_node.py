@@ -28,7 +28,7 @@ from src.agents.supervisor import system_prompt
 
 class RouterOutput(TypedDict):
     """Agente al que se debe dirigir a continuación. Si no se necesitan más Agente, dirigir a FINISH."""
-    next: Literal["productos_nodo","stock_nodo","ventas_nodo", "FINISH"]
+    next: Literal["productos_nodo","stock_nodo","ventas_nodo","sobre_nosotros_nodo", "FINISH"]
 
 def supervisor_node(state: MessagesState): #-> Command[Literal["ventas_stock_nodo",  "__end__"]]:
     messages = [
